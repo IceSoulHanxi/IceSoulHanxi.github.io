@@ -8,14 +8,13 @@ subtitle: ''
 description: ''
 keywords: [Java, Kotlin, Vertx, Hexo]
 author: 寒兮
-language: zh-Hans
+language: zh-CN
 timezone: ''
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://icesoulhanxi.github.io/
-root: /
-permalink: :year/:month/:day/:title/
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://blog.ixnah.com
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -30,6 +29,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - lib/**/*
+  - books/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -46,11 +47,11 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   enable: false
   preprocess: true
@@ -98,7 +99,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: melody
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
