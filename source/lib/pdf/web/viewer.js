@@ -12301,7 +12301,7 @@ class BasePreferences {
     "disableAutoFetch": true,
     "disableFontFace": false,
     "disableRange": false,
-    "disableStream": false,
+    "disableStream": true,
     "enableXfa": true
   });
   #prefs = Object.create(null);
