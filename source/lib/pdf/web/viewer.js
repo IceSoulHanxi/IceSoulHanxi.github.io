@@ -3159,7 +3159,7 @@ const defaultOptions = {
     kind: OptionKind.API + OptionKind.PREFERENCE
   },
   disableStream: {
-    value: false,
+    value: true,
     kind: OptionKind.API + OptionKind.PREFERENCE
   },
   docBaseUrl: {
