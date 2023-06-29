@@ -12298,7 +12298,7 @@ class BasePreferences {
     "useOnlyCssZoom": false,
     "viewerCssTheme": 0,
     "viewOnLoad": 0,
-    "disableAutoFetch": false,
+    "disableAutoFetch": true,
     "disableFontFace": false,
     "disableRange": false,
     "disableStream": false,
