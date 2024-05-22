@@ -1,0 +1,19 @@
+{# 通过localStorage开启PDF.js分页加载 #}
+<script>
+    let setPreferences = true;
+    let preferences = {};
+    const preferencesData = localStorage.getItem("pdfjs.preferences");
+    if (preferencesData) {
+        preferences = JSON.parse(preferencesData);
+        if (preferences.disableAutoFetch && preferences.disableStream) {
+            setPreferences = false;
+        }
+    }
+    if (setPreferences) {
+        localStorage.setItem("pdfjs.preferences", JSON.stringify({
+            ...preferences,
+            disableAutoFetch: true,
+            disableStream: true
+        }));
+    }
+</script>

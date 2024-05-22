@@ -18,6 +18,6 @@ hexo.extend.tag.register("books", async function (args) {
         let fileName = path.basename(f);
         fileName = fileName.substring(0, fileName.lastIndexOf("."));
         const fullPath = path.join("/books", ...args, ...f.split("\\"));
-        return `<td>${fileName}</td><td><a href="${viewerUrl}?file=${encodeURIComponent(fullPath)}">在线阅读</a></td><td><a href="${fullPath}">下载阅读</a></td>`
+        return `<td>${fileName}</td><td><a href="${viewerUrl}?file=${encodeURI(fullPath)}">在线阅读</a></td><td><a href="${fullPath}">下载阅读</a></td>`
     }).join(`</tr><tr>`) + `</tr></table>`;
 }, { async: true });
