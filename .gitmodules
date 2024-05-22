@@ -1,3 +1,6 @@
 [submodule "source/lib/pdf"]
 	path = source/lib/pdf
 	url = https://github.com/next-theme/theme-next-pdf.git
+[submodule "source/books/save-paper"]
+	path = source/books/save-paper
+	url = https://gitee.com/uitc/save-paper.git
