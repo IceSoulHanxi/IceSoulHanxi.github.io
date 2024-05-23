@@ -32,14 +32,12 @@ jobs:
         env:
           cache-name: cache-save-paper
         with:
-          path: ./source/books/save-paper
+          path: |
+            ./source/books/save-paper
+            ./.git/modules/source/books/save-paper
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('.gitmodules') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
       - name: Init submodules
-        run: git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+        run: git -c protocol.version=2 submodule update --init --no-fetch --depth=1 --recursive
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Setup Node.js environment
