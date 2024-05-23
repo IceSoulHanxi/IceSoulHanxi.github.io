@@ -25,6 +25,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Cache save-paper
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-save-paper
+        with:
+          path: ./source/books/save-paper
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('.gitmodules') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
       - name: Checkout
         uses: actions/checkout@v4
         with:
